@@ -1,6 +1,9 @@
 package com.example.webviewapp;
 
 import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -8,14 +11,23 @@ import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
+    private WebViewClient myWebViewClient;
+    private WebSettings myWebSettings;
+
+    private WebView myWebView;
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
+        myWebView.loadURL("https://his.se");
     }
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
+        myWebView.loadURL("https://earth.google.com");
+
     }
 
     @Override
@@ -24,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        myWebView=(WebView) findViewById(R.id.my_webview);
+        myWebView.setWebViewClient(new WebViewClient());
 
         /*
         * Rename your App. Tip: Values->Strings
