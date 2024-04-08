@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         myWebView=(WebView) findViewById(R.id.my_webview);
         myWebView.setWebViewClient(new WebViewClient());
 
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
         /*
         * Rename your App. Tip: Values->Strings
         * Enable Internet access for your App. Tip: Manifest
