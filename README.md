@@ -39,7 +39,7 @@ public void showInternalWebPage(){
 
 I showInternalWebPage() länkade jag html filen. Tyvärr så funkade det inte att klicka på länken till
 den externa webbsidan då det blev ett DNS fel där brandväggen blockerade som man kan se i bilden
-nedan. Efter det kallade jag på de två funktionerna i "onOptionsItemSelected":
+nedan. Till sist kallade jag på de två funktionerna i "onOptionsItemSelected":
 
 if (id == R.id.action_external_web) {
     Log.d("==>","Will display external web page");
@@ -57,7 +57,7 @@ if (id == R.id.action_internal_web) {
 
 Bilder läggs i samma mapp som markdown-filen.
 
-![](android.png)
+![img.png](img.png)![img_1.png](img_1.png)
 
 Läs gärna:
 
